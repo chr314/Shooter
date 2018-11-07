@@ -422,17 +422,18 @@ Game.prototype = {
     },
 
     render: function () {
-        for (var i = 0; i < this.muricaEnemies.length; i++) {
-            game.debug.body(this.muricaEnemies.children[i]);
+        if(debuging) {
+            for (var i = 0; i < this.muricaEnemies.length; i++) {
+                game.debug.body(this.muricaEnemies.children[i]);
+            }
+            for (var i = 0; i < this.trumpEnemies.length; i++) {
+                game.debug.body(this.trumpEnemies.children[i]);
+            }
+            for (var i = 0; i < this.trumpEnemyBullets.length; i++) {
+                game.debug.body(this.trumpEnemyBullets.children[i]);
+            }
+            game.debug.body(this.player);
         }
-        for (var i = 0; i < this.trumpEnemies.length; i++) {
-            game.debug.body(this.trumpEnemies.children[i]);
-        }
-        for (var i = 0; i < this.trumpEnemyBullets.length; i++) {
-            game.debug.body(this.trumpEnemyBullets.children[i]);
-        }
-        game.debug.body(this.player);
-
     },
 
     fireBullet: function () {

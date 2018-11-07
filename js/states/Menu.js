@@ -50,7 +50,6 @@ Menu.prototype = {
 
         game.stage.disableVisibilityChange = true;
 
-        game.add.sprite(0, 0, 'menu-bg');
         game.add.existing(this.titleText);
 
         this.addMenuOption('Start', function () {
@@ -58,10 +57,8 @@ Menu.prototype = {
 
         });
         this.addMenuOption('Options', function () {
-            console.log('You clicked Options!');
+            alert("Coming soon...");
         });
-        this.addMenuOption('Credits', function () {
-            console.log('You clicked Credits!');
-        });
+
     }
 };
